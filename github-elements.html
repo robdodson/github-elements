@@ -100,8 +100,8 @@ limitations under the License.
       signingIn: false,
 
       ready: function() {
+        this.token = this.token || window.localStorage['github-element-token'] || '';
         this.signingInChanged();
-        this.token = window.localStorage['github-element-token'] || '';
       },
 
       signingInChanged: function() {
